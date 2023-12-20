@@ -1,7 +1,10 @@
 import axios from "axios";
+import { API } from "../config";
 
 export default class NamazService {
+  constructor() {}
+
   async getAll(sehirIsmi) {
-    return axios.get("https://deneme-6mf0.onrender.com/getAll/" + sehirIsmi);
+    return await axios.get(API + "getAll/" + sehirIsmi);
   }
 }

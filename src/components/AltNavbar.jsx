@@ -1,31 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container } from "semantic-ui-react";
-import NamazService from "../utils/NamazService";
-import { useParams } from "react-router-dom";
 
-export default function AltNavbar() {
-  const { sehirIsmi } = useParams();
+export default function AltNavbar({ data }) {
+  const takvim = data;
 
-  const [takvim, setTakvim] = useState({}); // varsayılan olarak boş bir obje ile başlat
-  const [tarih, setTarih] = useState("");
-
-  useEffect(() => {
-    let takvimservice = new NamazService();
-    takvimservice.getAll(sehirIsmi).then((result) => {
-      // Saat formatındaki öğelerin son 3 karakterini kaldır
-      const trimmedData = { ...result.data };
-      Object.keys(trimmedData).forEach((key) => {
-        if (
-          typeof trimmedData[key] === "string" &&
-          trimmedData[key].length >= 3
-        ) {
-          trimmedData[key] = trimmedData[key].slice(0, -3);
-        }
-      });
-      setTakvim(trimmedData);
-      setTarih(result.data.tarih);
-    });
-  }, []);
   return (
     <Container
       fluid

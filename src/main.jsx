@@ -10,8 +10,8 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/:sehirIsmi" element={<App />} />
       <Route path="/" element={<StartPage />} />
+      <Route path="/*" element={<App />} />
     </Routes>
   </BrowserRouter>
 );

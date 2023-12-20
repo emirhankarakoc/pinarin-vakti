@@ -3,28 +3,8 @@ import { Container } from "semantic-ui-react";
 import NamazService from "../utils/NamazService";
 import { useParams } from "react-router-dom";
 
-export default function LeftTable() {
-  const { sehirIsmi } = useParams();
-
-  const [takvim, setTakvim] = useState({});
-  const [tarih, setTarih] = useState("");
-
-  useEffect(() => {
-    let takvimservice = new NamazService();
-    takvimservice.getAll(sehirIsmi).then((result) => {
-      const trimmedData = { ...result.data };
-      Object.keys(trimmedData).forEach((key) => {
-        if (
-          typeof trimmedData[key] === "string" &&
-          trimmedData[key].length >= 3
-        ) {
-          trimmedData[key] = trimmedData[key].slice(0, -3);
-        }
-      });
-      setTakvim(trimmedData);
-      setTarih(result.data.tarih);
-    });
-  }, []);
+export default function LeftTable({ data }) {
+  const takvim = data;
 
   return (
     <div
