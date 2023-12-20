@@ -30,7 +30,7 @@ export default function AltNavbar() {
   return (
     
     <Container fluid style={{ borderRadius: '30px' , backgroundColor: 'orange', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize:'15px' }}>
+      <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center', fontSize:'30px' }}>
         <tbody>
           <tr style={{fontWeight:'900', color:'black'}}>
             <td style={{ padding: '10px' }}>İMSAK</td>

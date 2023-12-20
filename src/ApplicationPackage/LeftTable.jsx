@@ -24,7 +24,8 @@ export default function LeftTable() {
   }, []);
 
   return (
-    <div className="container" style={{ color: 'white', fontWeight: '600', margin: '50px',fontSize:'20px' }}>
+    <div className="container" style={{ color: 'white', fontWeight: '900', margin: '50px',fontSize:'30px' }}>
+      <div className="left"></div>
       <div className="center">
         <Container fluid style={{ backgroundColor: 'black', opacity: 0.8, borderRadius: '10px' }}>
           <table style={{ width: '100%', borderCollapse: 'collapse', textAlign: 'center' }}>
