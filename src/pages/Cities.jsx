@@ -1,13 +1,12 @@
-import React from "react";
-import TopNavbar from "./TopNavbar";
-import AltNavbar from "./AltNavbar";
-import LeftTable from "./LeftTable";
-import background from "../assets/image1.png";
-import { useEffect } from "react";
-import NamazService from "../utils/NamazService";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
-export default function Uygulama() {
+import background from "../assets/image1.png";
+import NamazService from "../utils/NamazService";
+import { Navbar } from "../components/Navbar";
+import { AltNavbar } from "../components/AltNavbar";
+import { Table } from "../components/Table";
+
+export const Cities = () => {
   const [data, setData] = useState(null); // varsayılan olarak boş bir obje ile başlat
 
   const sehirIsmi = location.pathname.split("/").pop();
@@ -52,9 +51,9 @@ export default function Uygulama() {
         fontWeight: "600",
       }}
     >
-      <TopNavbar data={data} />
+      <Navbar />
       <AltNavbar data={data} />
-      <LeftTable data={data} />
+      <Table data={data} />
     </div>
   );
-}
+};

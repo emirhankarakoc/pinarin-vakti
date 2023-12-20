@@ -1,47 +1,46 @@
-import React from "react";
 import { Container } from "semantic-ui-react";
 
-export default function AltNavbar({ data }) {
+export const AltNavbar = ({ data }) => {
   const takvim = data;
 
   return (
-    <Container
-      fluid
-      style={{
-        borderRadius: "30px",
-        backgroundColor: "orange",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <table
-        style={{
-          width: "100%",
-          borderCollapse: "collapse",
-          textAlign: "center",
-          fontSize: "30px",
-        }}
-      >
-        <tbody>
-          <tr style={{ fontWeight: "900", color: "black" }}>
-            <td style={{ padding: "10px" }}>İMSAK</td>
-            <td style={{ padding: "10px" }}>GÜNEŞ</td>
-            <td style={{ padding: "10px" }}>ÖĞLE</td>
-            <td style={{ padding: "10px" }}>İKİNDİ</td>
-            <td style={{ padding: "10px" }}>AKŞAM</td>
-            <td style={{ padding: "10px" }}>YATSI</td>
-          </tr>
-          <tr style={{ fontWeight: "800", color: "white" }}>
-            <td style={{ padding: "10px" }}>{takvim.imsak}</td>
-            <td style={{ padding: "10px" }}>{takvim.gunes}</td>
-            <td style={{ padding: "10px" }}>{takvim.ogle}</td>
-            <td style={{ padding: "10px" }}>{takvim.ikindi}</td>
-            <td style={{ padding: "10px" }}>{takvim.aksam}</td>
-            <td style={{ padding: "10px" }}>{takvim.yatsi}</td>
-          </tr>
-        </tbody>
-      </table>
-    </Container>
+    <div className="container mt-5">
+      <div className="table-responsive">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th scope="col" className="text-primary fs-3">
+                İmsak
+              </th>
+              <th scope="col" className="text-primary fs-3">
+                Güneş
+              </th>
+              <th scope="col" className="text-primary fs-3">
+                Öğle
+              </th>
+              <th scope="col" className="text-primary fs-3">
+                İkindi
+              </th>
+              <th scope="col" className="text-primary fs-3">
+                Akşam
+              </th>
+              <th scope="col" className="text-primary fs-3">
+                Yatsı
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">{data.imsak}</th>
+              <th scope="row">{data.gunes}</th>
+              <th scope="row">{data.ogle}</th>
+              <th scope="row">{data.ikindi || data.ikinci}</th>
+              <th scope="row">{data.aksam}</th>
+              <th scope="row">{data.yatsi}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   );
-}
+};
