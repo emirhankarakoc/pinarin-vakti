@@ -24,7 +24,7 @@ export default function AltNavbar() {
             trimmedData[key] = trimmedData[key].slice(0, -3);
           }
         });
-console.log(result)
+      console.log(result)
         setTakvim(trimmedData);
         setTarih(result[0].tarih);
       } catch (error) {
@@ -47,20 +47,25 @@ console.log(result)
                 <td style={{ padding: '5px' }}>IMSAK</td>
                 <td style={{ padding: '5px' }}>{takvim.imsak}</td>
               </tr>
+              
               <tr style={{ fontWeight: '300', color: 'white' }}>
-                <td style={{ padding: '5px' }}>GUNES</td>
+                <td style={{ padding: '5px' }}>SABAH</td>
+                <td style={{ padding: '5px' }}>{takvim.sabahnamazi}</td>
+              </tr>
+              <tr style={{ fontWeight: '300', color: 'white' }}>
+                <td style={{ padding: '5px' }}>GÜNEŞ</td>
                 <td style={{ padding: '5px' }}>{takvim.gunes}</td>
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
-                <td style={{ padding: '5px' }}>OGLE</td>
+                <td style={{ padding: '5px' }}>ÖĞLE</td>
                 <td style={{ padding: '5px' }}>{takvim.ogle}</td>
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
-                <td style={{ padding: '5px' }}>IKINDI</td>
+                <td style={{ padding: '5px' }}>İKİNDİ</td>
                 <td style={{ padding: '5px' }}>{takvim.ikinci}</td>
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
-                <td style={{ padding: '5px' }}>AKSAM</td>
+                <td style={{ padding: '5px' }}>AKŞAM</td>
                 <td style={{ padding: '5px' }}>{takvim.aksam}</td>
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
