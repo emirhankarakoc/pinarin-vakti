@@ -3,7 +3,7 @@ import axios from 'axios';
 export default class NamazService {
   constructor() {
     this.api = axios.create({
-      baseURL: 'http://localhost:8081',
+      baseURL: 'https://three-k6az.onrender.com',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
