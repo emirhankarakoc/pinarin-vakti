@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 export default function AltNavbar() {
   const { sehirIsmi } = useParams();
 
-  const [takvim, setTakvim] = useState({});
+  const [takvim, setTakvim] = useState([]);
   const [tarih, setTarih] = useState('');
   
 
@@ -18,15 +18,15 @@ export default function AltNavbar() {
         let takvimservice = new NamazService();
         const result = await takvimservice.getAll(sehirIsmi);
         
-        const trimmedData = { ...result };
+        const trimmedData = { ...result[0] };
         Object.keys(trimmedData).forEach((key) => {
           if (typeof trimmedData[key] === 'string' && trimmedData[key].length >= 3) {
             trimmedData[key] = trimmedData[key].slice(0, -3);
           }
         });
-
+console.log(result)
         setTakvim(trimmedData);
-        setTarih(result.tarih);
+        setTarih(result[0].tarih);
       } catch (error) {
         console.error('Hata:', error);
       }
@@ -57,7 +57,7 @@ export default function AltNavbar() {
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
                 <td style={{ padding: '5px' }}>IKINDI</td>
-                <td style={{ padding: '5px' }}>{takvim.ikindi}</td>
+                <td style={{ padding: '5px' }}>{takvim.ikinci}</td>
               </tr>
               <tr style={{ fontWeight: '300', color: 'white' }}>
                 <td style={{ padding: '5px' }}>AKSAM</td>
