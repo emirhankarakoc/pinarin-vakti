@@ -49,8 +49,6 @@
   padding: 30;
 }
 .container {
-  width: calc(100% - 60px); /* Genişliği 100%, ancak margin'leri çıkarmak için 60px çıkar */
-  margin: 0 30px; /* Sağdan ve soldan 30px margin */
   display: flex;
   justify-content: space-between;
   align-items: center;
