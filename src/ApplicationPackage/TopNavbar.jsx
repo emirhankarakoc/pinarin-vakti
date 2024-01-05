@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 export default function TopNavbar() {
   const { sehirIsmi } = useParams();
-  const [takvim, setTakvim] = useState([]);
+  const [takvim, setTakvim] = useState({});
   const [tarih, setTarih] = useState('');
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function TopNavbar() {
         
         console.log(result);
         setTakvim(trimmedData);
-        setTarih(result[0].tarih);
+        setTarih(result.tarih);
       } catch (error) {
         console.error('Hata:', error);
       }
@@ -32,17 +32,17 @@ export default function TopNavbar() {
   }, [sehirIsmi]);
 
   let formattedDate = "";
-  if (takvim.tarih) {
+ /* if (takvim.tarih) {
     const parts = takvim.tarih.split("T")[0].split("-");
     formattedDate = `${parts[2]}.${parts[1]}.${parts[0]}`;
     console.log(formattedDate);
-  }
+  } */
 
   return (
     <div className="container" style={{ color: 'white', fontWeight: '900' }}>
       <div className="left">PINARIN VAKTI</div>
       <div className="center">{sehirIsmi.toUpperCase()} İÇİN NAFİLE NAMAZ VAKİTLERİ</div>
-      <div className="right">{formattedDate}</div>
+      <div className="right">{takvim.tarih}</div>
     </div>
   );
 }

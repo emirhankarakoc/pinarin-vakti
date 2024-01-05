@@ -8,7 +8,7 @@ import { useParams } from 'react-router-dom';
 export default function AltNavbar() {
   const { sehirIsmi } = useParams();
 
-  const [takvim, setTakvim] = useState([]);
+  const [takvim, setTakvim] = useState({});
   const [tarih, setTarih] = useState('');
   
 
@@ -24,9 +24,9 @@ export default function AltNavbar() {
             trimmedData[key] = trimmedData[key].slice(0, -3);
           }
         });
-      console.log(result)
+      
         setTakvim(trimmedData);
-        setTarih(result[0].tarih);
+        setTarih(result.tarih);
       } catch (error) {
         console.error('Hata:', error);
       }

@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 export default function LeftTable() {
   const { sehirIsmi } = useParams();
 
-  const [takvim, setTakvim] = useState([]);
+  const [takvim, setTakvim] = useState({});
   const [tarih, setTarih] = useState('');
 
   useEffect(() => {
@@ -22,8 +22,8 @@ export default function LeftTable() {
           }
         });
       console.log(result)
-        setTakvim(trimmedData);
-        setTarih(result[0].tarih);
+        setTakvim(result);
+        setTarih(result.tarih);
       } catch (error) {
         console.error('Hata:', error);
       }
@@ -32,7 +32,7 @@ export default function LeftTable() {
     fetchData();
   }, [sehirIsmi]); // useEffect'in bağımlılığını güncelledik
 
-
+    console.log(takvim.tarih)
   return (
     <div className="container" style={{ color: 'white', fontWeight: '400',fontSize:'20px' }}>
       <div className="center">

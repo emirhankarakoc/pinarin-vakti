@@ -3,7 +3,7 @@ import axios from 'axios';
 export default class NamazService {
   constructor() {
     this.api = axios.create({
-      baseURL: 'https://three-k6az.onrender.com',
+      baseURL: 'https://backend-namaz.onrender.com',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
@@ -14,7 +14,7 @@ export default class NamazService {
 
   async getAll(sehirIsmi) {
     try {
-      const response = await this.api.get(`/getToday/${sehirIsmi}`);
+      const response = await this.api.get(`/getAll/${sehirIsmi}`);
       return response.data;
     } catch (error) {
       throw error;
