@@ -4,7 +4,7 @@ const cors = require('cors');
 const app = express()
 
 app.use(cors({
-    origin:"http://localhost:3000"
+    origin:"https://pv-front-emirhankarakoc.vercel.app"
 }))
 
 const db = mysql.createConnection("mysql://avnadmin:AVNS_yM_F2k3uPrFi25x7oAa@pinarinvakti-emirhankarakoc.a.aivencloud.com:17369/defaultdb?ssl-mode=REQUIRED")
