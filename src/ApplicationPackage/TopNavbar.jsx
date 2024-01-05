@@ -31,7 +31,7 @@ export default function TopNavbar() {
   return (
     <div className="container" style={{ color: 'white', fontWeight: '900' }}>
       <div className="left">PINARIN VAKTI</div>
-      <div className="center">{sehirIsmi.toUpperCase()} İÇİN NAFİLE NAMAZ VAKİTLERİ6666</div>
+      <div className="center">{sehirIsmi.toUpperCase()} İÇİN NAFİLE NAMAZ VAKİTLERİ5555555</div>
       <div className="right">{gunAyYil[2] + "/" + gunAyYil[1] + "/" + gunAyYil[0]}</div>
     </div>
   );
