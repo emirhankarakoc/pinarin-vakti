@@ -7,7 +7,7 @@ export default class NamazService {
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
-        'Access-Control-Allow-Origin': '*', // Add the allowed origin
+        'Access-Control-Allow-Origin: https://pv-front-emirhankarakoc.vercel.app' // Add the allowed origin
       },
     });
   }
