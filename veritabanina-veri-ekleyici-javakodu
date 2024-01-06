@@ -1,0 +1,109 @@
+
+//bismillah metoduna, birinci parametre sehrin ismi. bizdeki veritabani tablosunun da ismiyle ayni oldugu icin boyle kullandik.
+//bismillah metouna ikinci parametre ise, diyanete girip kopyala yapistir yapin direkt.
+
+//bazi ciktilar
+/*
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-06','06:26','07:57','12:51','15:14','17:35','19:00');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-07','06:26','07:57','12:51','15:15','17:36','19:01');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-08','06:26','07:57','12:52','15:16','17:37','19:02');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-09','06:26','07:56','12:52','15:17','17:38','19:03');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-10','06:26','07:56','12:53','15:17','17:39','19:04');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-11','06:26','07:56','12:53','15:18','17:40','19:04');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-12','06:26','07:56','12:53','15:19','17:41','19:05');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-13','06:26','07:56','12:54','15:20','17:42','19:06');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-14','06:26','07:55','12:54','15:21','17:43','19:07');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-15','06:26','07:55','12:55','15:22','17:44','19:08');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-16','06:25','07:55','12:55','15:23','17:45','19:09');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-17','06:25','07:54','12:55','15:24','17:46','19:10');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-18','06:25','07:54','12:56','15:25','17:48','19:11');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-19','06:24','07:53','12:56','15:26','17:49','19:12');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-20','06:24','07:53','12:56','15:27','17:50','19:13');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-21','06:24','07:52','12:57','15:28','17:51','19:14');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-22','06:23','07:51','12:57','15:29','17:52','19:15');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-23','06:23','07:51','12:57','15:30','17:53','19:16');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-24','06:22','07:50','12:57','15:31','17:55','19:17');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-25','06:22','07:49','12:58','15:32','17:56','19:18');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-26','06:21','07:49','12:58','15:33','17:57','19:19');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-27','06:21','07:48','12:58','15:34','17:58','19:20');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-28','06:20','07:47','12:58','15:35','17:59','19:21');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-29','06:19','07:46','12:58','15:36','18:01','19:22');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-30','06:19','07:45','12:59','15:37','18:02','19:23');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-01-31','06:18','07:45','12:59','15:38','18:03','19:24');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-02-01','06:17','07:44','12:59','15:39','18:04','19:25');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-02-02','06:16','07:43','12:59','15:40','18:05','19:26');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-02-03','06:16','07:42','12:59','15:41','18:07','19:28');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-02-04','06:15','07:41','12:59','15:42','18:08','19:29');
+INSERT INTO baku (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES ('2024-02-05','06:14','07:40','12:59','15:43','18:09','19:30');
+
+
+
+*/
+
+public class Main {
+    public static void main(String[] args) {
+        bismillah("baku","06 Ocak 2024 Cumartesi\t24 Cemaziyelahir 1445\t06:26\t07:57\t12:51\t15:14\t17:35\t19:00\n" +
+                "07 Ocak 2024 Pazar\t25 Cemaziyelahir 1445\t06:26\t07:57\t12:51\t15:15\t17:36\t19:01\n" +
+                "08 Ocak 2024 Pazartesi\t26 Cemaziyelahir 1445\t06:26\t07:57\t12:52\t15:16\t17:37\t19:02\n" +
+                "09 Ocak 2024 Salı\t27 Cemaziyelahir 1445\t06:26\t07:56\t12:52\t15:17\t17:38\t19:03\n" +
+                "10 Ocak 2024 Çarşamba\t28 Cemaziyelahir 1445\t06:26\t07:56\t12:53\t15:17\t17:39\t19:04\n" +
+                "11 Ocak 2024 Perşembe\t29 Cemaziyelahir 1445\t06:26\t07:56\t12:53\t15:18\t17:40\t19:04\n" +
+                "12 Ocak 2024 Cuma\t1 Recep 1445\t06:26\t07:56\t12:53\t15:19\t17:41\t19:05\n" +
+                "13 Ocak 2024 Cumartesi\t2 Recep 1445\t06:26\t07:56\t12:54\t15:20\t17:42\t19:06\n" +
+                "14 Ocak 2024 Pazar\t3 Recep 1445\t06:26\t07:55\t12:54\t15:21\t17:43\t19:07\n" +
+                "15 Ocak 2024 Pazartesi\t4 Recep 1445\t06:26\t07:55\t12:55\t15:22\t17:44\t19:08\n" +
+                "16 Ocak 2024 Salı\t5 Recep 1445\t06:25\t07:55\t12:55\t15:23\t17:45\t19:09\n" +
+                "17 Ocak 2024 Çarşamba\t6 Recep 1445\t06:25\t07:54\t12:55\t15:24\t17:46\t19:10\n" +
+                "18 Ocak 2024 Perşembe\t7 Recep 1445\t06:25\t07:54\t12:56\t15:25\t17:48\t19:11\n" +
+                "19 Ocak 2024 Cuma\t8 Recep 1445\t06:24\t07:53\t12:56\t15:26\t17:49\t19:12\n" +
+                "20 Ocak 2024 Cumartesi\t9 Recep 1445\t06:24\t07:53\t12:56\t15:27\t17:50\t19:13\n" +
+                "21 Ocak 2024 Pazar\t10 Recep 1445\t06:24\t07:52\t12:57\t15:28\t17:51\t19:14\n" +
+                "22 Ocak 2024 Pazartesi\t11 Recep 1445\t06:23\t07:51\t12:57\t15:29\t17:52\t19:15\n" +
+                "23 Ocak 2024 Salı\t12 Recep 1445\t06:23\t07:51\t12:57\t15:30\t17:53\t19:16\n" +
+                "24 Ocak 2024 Çarşamba\t13 Recep 1445\t06:22\t07:50\t12:57\t15:31\t17:55\t19:17\n" +
+                "25 Ocak 2024 Perşembe\t14 Recep 1445\t06:22\t07:49\t12:58\t15:32\t17:56\t19:18\n" +
+                "26 Ocak 2024 Cuma\t15 Recep 1445\t06:21\t07:49\t12:58\t15:33\t17:57\t19:19\n" +
+                "27 Ocak 2024 Cumartesi\t16 Recep 1445\t06:21\t07:48\t12:58\t15:34\t17:58\t19:20\n" +
+                "28 Ocak 2024 Pazar\t17 Recep 1445\t06:20\t07:47\t12:58\t15:35\t17:59\t19:21\n" +
+                "29 Ocak 2024 Pazartesi\t18 Recep 1445\t06:19\t07:46\t12:58\t15:36\t18:01\t19:22\n" +
+                "30 Ocak 2024 Salı\t19 Recep 1445\t06:19\t07:45\t12:59\t15:37\t18:02\t19:23\n" +
+                "31 Ocak 2024 Çarşamba\t20 Recep 1445\t06:18\t07:45\t12:59\t15:38\t18:03\t19:24\n" +
+                "01 Şubat 2024 Perşembe\t21 Recep 1445\t06:17\t07:44\t12:59\t15:39\t18:04\t19:25\n" +
+                "02 Şubat 2024 Cuma\t22 Recep 1445\t06:16\t07:43\t12:59\t15:40\t18:05\t19:26\n" +
+                "03 Şubat 2024 Cumartesi\t23 Recep 1445\t06:16\t07:42\t12:59\t15:41\t18:07\t19:28\n" +
+                "04 Şubat 2024 Pazar\t24 Recep 1445\t06:15\t07:41\t12:59\t15:42\t18:08\t19:29\n" +
+                "05 Şubat 2024 Pazartesi\t25 Recep 1445\t06:14\t07:40\t12:59\t15:43\t18:09\t19:30");
+    }
+    public static String tariheCevir(String tarih){
+        String[] array = tarih.split(" ");
+        switch (array[1]){
+            case "Ocak":{ array[1]="01"; break;}
+            case "Şubat":{ array[1]="02"; break;}
+            case "Mart":{ array[1]="03"; break;}
+            case "Nisan":{ array[1]="04"; break;}
+            case "Mayıs":{ array[1]="05"; break;}
+            case "Haziran":{ array[1]="06"; break;}
+            case "Temmuz":{ array[1]="07"; break;}
+            case "Ağustos":{ array[1]="08"; break;}
+            case "Eylül":{ array[1]="09"; break;}
+            case "Ekim":{ array[1]="10"; break;}
+            case "Kasım":{ array[1]="11"; break;}
+            case "Aralık":{ array[1]="12"; break;}
+        }
+        return array[2]+"-"+array[1]+"-"+array[0];
+    }
+
+    public static void bismillah(String sehirIsmi,String veriler){
+        String[] teksatir = veriler.split("\n");
+        String[] strarr = {};
+        for (int i = 0;i<teksatir.length;i++){
+            String str=teksatir[i];
+            strarr = str.split("\t");
+            System.out.println("INSERT INTO "+ sehirIsmi + " (tarih, imsak, gunes, ogle, ikinci, aksam, yatsi) VALUES "
+                    +
+                    "('"+tariheCevir(strarr[0])+"','"+strarr[2]+"',"+"'"+strarr[3]+"',"+"'"+strarr[4]+"',"+"'"+strarr[5]+"'"+",'"+strarr[6]+"',"+"'"+strarr[7]+"');\n"
+            );
+        }
+    }
+}
+//emirhan karakoc 2023 denizli.
