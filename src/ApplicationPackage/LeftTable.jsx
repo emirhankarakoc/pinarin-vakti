@@ -66,9 +66,8 @@ export default function LeftTable() {
               </tr>
             </tbody>
           </table>
-          <p></p>
+          <p style={{marginTop:'5px'}}></p>
           LÜTFEN ACELE ETMEYİN, BİRAZ BEKLEYİP SAYFAYI YENİLEYİN. VERİLER GELECEKTİR.
-
         </Container>
       </div>
     </div>
