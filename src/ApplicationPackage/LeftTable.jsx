@@ -66,8 +66,8 @@ export default function LeftTable() {
               </tr>
             </tbody>
           </table>
-          LÜTFEN ACELE ETMEYİN, BİRAZ BEKLEYİP SAYFAYI YENİLEYİN. VERİLER GELECEKTİR.
         </Container>
+        \nLÜTFEN ACELE ETMEYİN, BİRAZ BEKLEYİP SAYFAYI YENİLEYİN. VERİLER GELECEKTİR.
       </div>
     </div>
   );
