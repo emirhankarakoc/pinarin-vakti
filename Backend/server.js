@@ -1,5 +1,4 @@
 const express = require('express');
-const sleep = require('sleep');
 const mysql = require('mysql');
 const cors = require('cors');
 const app = express()
@@ -21,7 +20,7 @@ const axios = require("axios");
 
 setInterval(async () => {
   try {
-    await axios.get("https://three-k6az.onrender.com/");
+    await axios.get("https://pv-front-emirhankarakoc.vercel.app/istanbul");
     console.log("Pinged");
   } catch (error) {
     console.log(error);
