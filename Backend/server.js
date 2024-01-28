@@ -17,10 +17,13 @@ app.get(`/getToday/:veritabaniIsmi`,(req,res)=>{
     }) 
     })
 app.listen(8081,()=>{console.log("listening")})
-app.get("/",(req,res)=>{
-    return "a"
-})
-while(true){
-    app.post("https://three-k6az.onrender.com/");
-    sleep.sleep(30);
-}
+const axios = require("axios");
+
+setInterval(async () => {
+  try {
+    await axios.get("https://three-k6az.onrender.com/");
+    console.log("Pinged");
+  } catch (error) {
+    console.log(error);
+  }
+}, 1000 * 60 * 5);
