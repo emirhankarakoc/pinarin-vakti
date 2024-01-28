@@ -1,7 +1,9 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
-const app = express()
+const app = express();
+const axios = require("axios");
+
 app.use(cors({
     origin:["https://pv-front-emirhankarakoc.vercel.app"]
 }))
@@ -16,7 +18,6 @@ app.get(`/getToday/:veritabaniIsmi`,(req,res)=>{
     }) 
     })
 app.listen(8081,()=>{console.log("listening")})
-const axios = require("axios");
 
 setInterval(async () => {
   try {
