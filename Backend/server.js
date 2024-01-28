@@ -1,4 +1,5 @@
 const express = require('express');
+const sleep = require('sleep');
 const mysql = require('mysql');
 const cors = require('cors');
 const app = express()
@@ -16,3 +17,10 @@ app.get(`/getToday/:veritabaniIsmi`,(req,res)=>{
     }) 
     })
 app.listen(8081,()=>{console.log("listening")})
+app.get("/",(req,res)=>{
+    return "a"
+})
+while(true){
+    app.post("https://three-k6az.onrender.com/");
+    sleep.sleep(30);
+}
