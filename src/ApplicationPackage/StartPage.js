@@ -16,6 +16,7 @@ export default function StartPage() {
     <div><Menu vertical >
        <Menu.Item as={NavLink} to="/denizli" name="Denizli" />        
        <Menu.Item as={NavLink} to="/baku" name="Baku" />
+       <Menu.Item as={NavLink} to="/ankara" name="Ankara" />
 
        <Menu.Item as={NavLink} to="/istanbul" name="İstanbul" />
       </Menu></div>
