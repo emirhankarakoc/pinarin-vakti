@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
 export default class NamazService {
   constructor() {
     this.api = axios.create({
-      baseURL: 'https://three-k6az.onrender.com',
+      baseURL: "https://emirhan-namaz-backend.kgzkbi.easypanel.host/",
       headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-         // Add the allowed origin
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        // Add the allowed origin
       },
     });
   }
