@@ -1,5 +1,5 @@
 const express = require("express");
-const mysql = require("mysql");
+const mysql = require("mysql2");
 const cors = require("cors");
 const app = express();
 
@@ -8,9 +8,25 @@ app.use(
     origin: ["https://emirhan-namaz-front.kgzkbi.easypanel.host/"],
   })
 );
-const db = mysql.createConnection(
-  "mysql://mysql:a24a3216d75682481eb8@kgzkbi.easypanel.host:3306/emirhan"
-);
+const db = mysql.createConnection({
+  host: "kgzkbi.easypanel.host",
+  user: "mysql",
+  password: "a24a3216d75682481eb8",
+  database: "emirhan",
+  port: 3306,
+  // Bu satırı ekleyerek yeni kimlik doğrulama protokollerini etkinleştirebilirsiniz.
+  authPlugins: {
+    mysql_clear_password: () => () => Buffer.from("a24a3216d75682481eb8"), // Şifrenizi buraya ekleyin.
+  },
+});
+
+db.connect(function (err) {
+  if (err) {
+    console.error("Hata:", err);
+  } else {
+    console.log("Veritabanına başarıyla bağlandı.");
+  }
+});
 app.get(`/getToday/:veritabaniIsmi`, (req, res) => {
   const veritabaniIsmi = req.params.veritabaniIsmi;
   const sql =
