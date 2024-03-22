@@ -3,7 +3,7 @@ import axios from "axios";
 export default class NamazService {
   constructor() {
     this.api = axios.create({
-      baseURL: "https://emirhan-namaz-backend.kgzkbi.easypanel.host/",
+      baseURL: "https://emirhan-namaz-backend.kgzkbi.easypanel.host",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
