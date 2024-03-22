@@ -11,6 +11,7 @@ const db = mysql.createConnection({
   password: "a24a3216d75682481eb8",
   database: "emirhan",
   port: 3306,
+  enableKeepAlive: true,
   // Bu satırı ekleyerek yeni kimlik doğrulama protokollerini etkinleştirebilirsiniz.
   authPlugins: {
     mysql_clear_password: () => () => Buffer.from("a24a3216d75682481eb8"), // Şifrenizi buraya ekleyin.
