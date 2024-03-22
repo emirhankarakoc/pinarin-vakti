@@ -3,11 +3,8 @@ const mysql = require("mysql2");
 const cors = require("cors");
 const app = express();
 
-app.use(
-  cors({
-    origin: ["https://emirhan-namaz-front.kgzkbi.easypanel.host/"],
-  })
-);
+app.use(cors());
+
 const db = mysql.createConnection({
   host: "kgzkbi.easypanel.host",
   user: "mysql",
