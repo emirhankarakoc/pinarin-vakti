@@ -48,3 +48,7 @@ app.get(`/getToday/:veritabaniIsmi`, (req, res) => {
 app.listen(8081, () => {
   console.log("listening");
 });
+
+app.get("/", (req, res) => {
+  return res.send("dogru duzgun calisiyor. hersey harika.");
+});
