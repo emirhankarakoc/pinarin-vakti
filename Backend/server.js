@@ -37,7 +37,9 @@ app.get(`/getToday/:veritabaniIsmi`, (req, res) => {
     veritabaniIsmi +
     " WHERE tarih = CURDATE()";
   db.query(sql, (err, data) => {
-    if (err) return res.json(err);
+    if (err) {
+      return res.json(err);
+    }
     console.log(data);
     return res.json(data);
   });
