@@ -32,6 +32,12 @@ export default function StartPage() {
               <ListGroup.Item action href="/istanbul">
                 Istanbul
               </ListGroup.Item>
+              <ListGroup.Item action href="/ankara">
+                Ankara
+              </ListGroup.Item>
+              <ListGroup.Item action href="/denizli">
+                Denizli
+              </ListGroup.Item>
             </ListGroup>
             <ListGroup>
               <ListGroup.Item
