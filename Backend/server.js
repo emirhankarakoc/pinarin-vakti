@@ -50,5 +50,7 @@ app.listen(8081, () => {
 });
 
 app.get("/", (req, res) => {
-  return res.send("dogru duzgun calisiyor. hersey harika.");
+  return res.send(
+    "<h2>selam, hersey yolunda gidiyor. istekleri atabilirsin. cevaplamak icin sabirsizlaniyorum.</h2>"
+  );
 });
