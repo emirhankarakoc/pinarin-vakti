@@ -13,7 +13,10 @@ export default function StartPage() {
         fontWeight: "600",
       }}
     >
-      <Container className="d-flex justify-content-center">
+      <Container
+        className="d-flex align-items-center justify-content-center"
+        style={{ height: "100vh" }}
+      >
         <Row>
           <Col>
             <ListGroup style={{ width: "200px" }} className="my-5">
