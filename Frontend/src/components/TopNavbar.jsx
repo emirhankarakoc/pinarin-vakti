@@ -14,7 +14,10 @@ export function TopNavbar(props) {
   }
 
   return (
-    <div style={{ color: "white", fontWeight: "900" }}>
+    <div
+      style={{ color: "white", fontWeight: "900" }}
+      className="justify-content-center d-flex"
+    >
       <Container
         style={{
           backgroundColor: "black",
@@ -25,7 +28,7 @@ export function TopNavbar(props) {
       >
         <Row>
           <Col>
-            <div className="d-flex justify-content-between">
+            <div className="d-flex justify-content-between mt-1">
               <div className="left">PINARIN VAKTI</div>
               <div className="center">
                 {sehirIsmi.toUpperCase()} İÇİN NAFİLE NAMAZ VAKİTLERİ
