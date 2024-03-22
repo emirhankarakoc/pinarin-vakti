@@ -15,7 +15,7 @@ export function AltNavbar(props) {
           style={{
             backgroundColor: "black",
             opacity: 0.8,
-            borderRadius: "10px",
+            borderRadius: "25px",
           }}
         >
           <table

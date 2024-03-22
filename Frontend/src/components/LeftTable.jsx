@@ -12,12 +12,12 @@ export function LeftTable(props) {
     >
       <div>
         <div
-          className="d-flex justify-content-center mt-3 mb-3"
+          className="d-flex justify-content-center mt-2 mb-2"
           style={{
-            padding: "10px",
+            padding: "5px",
             backgroundColor: "black",
             opacity: 0.8,
-            borderRadius: "10px",
+            borderRadius: "25px",
           }}
         >
           <Link to={"/"} className=" text-decoration-none ">
