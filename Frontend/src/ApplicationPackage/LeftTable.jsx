@@ -40,6 +40,9 @@ export default function LeftTable() {
       style={{ color: "white", fontWeight: "400", fontSize: "20px" }}
     >
       <div className="center">
+        <Link to={"/"} className=" text-decoration-none">
+          <Button className="bg-dark text-white mb-3">Geri Dön</Button>
+        </Link>
         <Container
           fluid
           style={{
@@ -84,9 +87,6 @@ export default function LeftTable() {
             </tbody>
           </table>
         </Container>
-        <Link to={"/"} className=" text-decoration-none">
-          <Button className="bg-dark text-white mt-3">Geri Dön</Button>
-        </Link>
       </div>
     </div>
   );
