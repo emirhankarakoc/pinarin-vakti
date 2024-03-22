@@ -39,6 +39,7 @@ app.get(`/getToday/:veritabaniIsmi`, (req, res) => {
   db.query(sql, (err, data) => {
     if (err) {
       console.log("birilerinin istegi basarisiz oldu.");
+      console.log(err);
       return res.json(err);
     }
     console.log("birilerinin istegine olumlu donus yapildi.");
