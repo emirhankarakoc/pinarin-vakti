@@ -1,7 +1,6 @@
 import React from "react";
 import background from "./assets/image1.png";
-import { Menu } from "semantic-ui-react";
-import { NavLink } from "react-router-dom";
+import { Col, Container, ListGroup, Row } from "react-bootstrap";
 
 export default function StartPage() {
   return (
@@ -14,21 +13,20 @@ export default function StartPage() {
         fontWeight: "600",
       }}
     >
-      <div>
-        <div className="container">
-          <div className="center margin-top-30px">
-            <div>
-              <Menu vertical>
-                <Menu.Item as={NavLink} to="/denizli" name="Denizli" />
-                <Menu.Item as={NavLink} to="/baku" name="Baku" />
-                <Menu.Item as={NavLink} to="/ankara" name="Ankara" />
-
-                <Menu.Item as={NavLink} to="/istanbul" name="İstanbul" />
-              </Menu>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Container className="d-flex justify-content-center">
+        <Row>
+          <Col>
+            <ListGroup style={{ width: "200px" }} className="my-5">
+              <ListGroup.Item action href="/baku">
+                Baku
+              </ListGroup.Item>
+              <ListGroup.Item action href="/istanbul">
+                Istanbul
+              </ListGroup.Item>
+            </ListGroup>
+          </Col>
+        </Row>
+      </Container>
     </div>
   );
 }

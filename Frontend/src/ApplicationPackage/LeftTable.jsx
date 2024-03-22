@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Container } from "semantic-ui-react";
+import { Button, Container } from "semantic-ui-react";
 import NamazService from "../services/NamazService";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function LeftTable() {
   const { sehirIsmi } = useParams();
@@ -82,10 +83,10 @@ export default function LeftTable() {
               </tr>
             </tbody>
           </table>
-          <p style={{ marginTop: "5px" }}></p>
-          LÜTFEN ACELE ETMEYİN, BİRAZ BEKLEYİP SAYFAYI YENİLEYİN. VERİLER
-          GELECEKTİR.
         </Container>
+        <Link to={"/"} className=" text-decoration-none">
+          <Button className="bg-dark text-white mt-3">Geri Dön</Button>
+        </Link>
       </div>
     </div>
   );

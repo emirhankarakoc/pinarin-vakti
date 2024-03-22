@@ -1,10 +1,9 @@
-import './App.css';
-import Uygulama from './ApplicationPackage/Uygulama';
+import "./App.css";
+import Uygulama from "./ApplicationPackage/Uygulama";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
-  return (
-    <Uygulama/>
-  );
+  return <Uygulama />;
 }
 
 export default App;
