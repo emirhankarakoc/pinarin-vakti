@@ -20,7 +20,7 @@ export function TopNavbar(props) {
           backgroundColor: "black",
           opacity: 0.8,
           borderRadius: "10px",
-          marginBottom: "20px",
+          margin: "10px",
         }}
       >
         <Row>

@@ -47,6 +47,7 @@ export default function Uygulama() {
         height: "100vh",
         fontFamily: "Inter, Arial, sans-serif",
         fontWeight: "600",
+        padding: "10px",
       }}
     >
       <TopNavbar takvim={takvim} />
