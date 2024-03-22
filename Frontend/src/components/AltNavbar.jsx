@@ -1,37 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Container } from "semantic-ui-react";
-import NamazService from "../services/NamazService";
-import { useParams } from "react-router-dom";
 
-export default function AltNavbar() {
-  const { sehirIsmi } = useParams();
-
-  const [takvim, setTakvim] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        let takvimservice = new NamazService();
-        const result = await takvimservice.getAll(sehirIsmi);
-
-        const trimmedData = { ...result[0] };
-        Object.keys(trimmedData).forEach((key) => {
-          if (
-            typeof trimmedData[key] === "string" &&
-            trimmedData[key].length >= 3
-          ) {
-            trimmedData[key] = trimmedData[key].slice(0, -3);
-          }
-        });
-        console.log(result);
-        setTakvim(trimmedData);
-      } catch (error) {
-        console.error("Hata:", error);
-      }
-    };
-
-    fetchData();
-  }, [sehirIsmi]); // useEffect'in bağımlılığını güncelledik
+export function AltNavbar(props) {
+  const takvim = props.takvim;
 
   return (
     <div

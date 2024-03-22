@@ -1,18 +1,26 @@
 import React from "react";
-import background from "./assets/image1.png";
-import { Button, Col, Container, ListGroup, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function StartPage() {
+import { Col, Container, ListGroup, Row } from "react-bootstrap";
+
+export default function App() {
   const redirectToWhatsApp = () => {
     const whatsappLink =
       "https://api.whatsapp.com/send?phone=905427333289&text=Selam%C4%B1n%20aleyk%C3%BCm.%20Benim%20ya%C5%9Fad%C4%B1%C4%9F%C4%B1m%20%C5%9Fehri%20de%20ekler%20misiniz%20%3F%20%C5%9Eehir%3A";
     window.location.href = whatsappLink;
   };
+
+  const imageSelect = () => {
+    const images = ["/assets/image1.png"]; //burayi arttir. aynen bu sekilde.
+    const randomIndex = Math.floor(Math.random() * images.length);
+    const randomImage = images[randomIndex];
+    return randomImage;
+  };
+
   return (
     <div
       style={{
-        backgroundImage: `url(${background})`,
+        backgroundImage: `url(${imageSelect()})`,
         backgroundSize: "cover",
         height: "100vh",
         fontFamily: "Inter, Arial, sans-serif",
