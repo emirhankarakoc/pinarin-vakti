@@ -24,7 +24,6 @@ export default function TopNavbar() {
 
         console.log(result);
         setTakvim(trimmedData);
-        setTarih(result[0].tarih);
       } catch (error) {
         console.error("Hata:", error);
       }
