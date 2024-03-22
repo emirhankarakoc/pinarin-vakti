@@ -19,7 +19,7 @@ const db = mysql.createConnection({
 
 db.connect(function (err) {
   if (err) {
-    console.error("Hata:", err);
+    //  console.error("Hata:", err);
   } else {
     console.log("Veritabanına başarıyla bağlandı.");
   }
@@ -38,9 +38,10 @@ app.get(`/getToday/:veritabaniIsmi`, (req, res) => {
     " WHERE tarih = CURDATE()";
   db.query(sql, (err, data) => {
     if (err) {
+      console.log("birilerinin istegi basarisiz oldu.");
       return res.json(err);
     }
-    console.log(data);
+    console.log("birilerinin istegine olumlu donus yapildi.");
     return res.json(data);
   });
 });
