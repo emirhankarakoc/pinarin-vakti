@@ -10,6 +10,15 @@ export function TopNavbar(props) {
     case "baku":
       sehirIsmi = "BAKÜ";
       break;
+    case "istanbul":
+      sehirIsmi = "İSTANBUL";
+      break;
+    case "ankara":
+      sehirIsmi = "ANKARA";
+      break;
+    case "denzli":
+      sehirIsmi = "DENİZLİ";
+      break;
   }
 
   let formattedDate = "";
@@ -36,9 +45,7 @@ export function TopNavbar(props) {
           <Col>
             <div className="d-flex justify-content-between mt-1">
               <div className="left">PINARIN VAKTI</div>
-              <div className="center">
-                {sehirIsmi.toUpperCase()} İÇİN NAMAZ VAKİTLERİ
-              </div>
+              <div className="center">{sehirIsmi} İÇİN NAMAZ VAKİTLERİ</div>
               <div className="right">{formattedDate}</div>
             </div>
           </Col>
