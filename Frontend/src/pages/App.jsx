@@ -35,10 +35,10 @@ export default function App() {
           <Col>
             <ListGroup style={{ width: "200px" }} className="my-5">
               <ListGroup.Item action href="/baku">
-                Baku
+                Bakü
               </ListGroup.Item>
               <ListGroup.Item action href="/istanbul">
-                Istanbul
+                İstanbul
               </ListGroup.Item>
               <ListGroup.Item action href="/ankara">
                 Ankara

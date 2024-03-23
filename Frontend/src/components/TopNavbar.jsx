@@ -4,7 +4,13 @@ import { useParams } from "react-router-dom";
 
 export function TopNavbar(props) {
   const takvim = props.takvim;
-  const { sehirIsmi } = useParams();
+  let { sehirIsmi } = useParams();
+  console.log(sehirIsmi);
+  switch (sehirIsmi) {
+    case "baku":
+      sehirIsmi = "BAKÜ";
+      break;
+  }
 
   let formattedDate = "";
   if (takvim.tarih) {
@@ -31,7 +37,7 @@ export function TopNavbar(props) {
             <div className="d-flex justify-content-between mt-1">
               <div className="left">PINARIN VAKTI</div>
               <div className="center">
-                {sehirIsmi.toUpperCase()} İÇİN NAFİLE NAMAZ VAKİTLERİ
+                {sehirIsmi.toUpperCase()} İÇİN NAMAZ VAKİTLERİ
               </div>
               <div className="right">{formattedDate}</div>
             </div>
