@@ -34,17 +34,20 @@ export default function App() {
         <Row>
           <Col>
             <ListGroup style={{ width: "200px" }} className="my-5">
-              <ListGroup.Item action href="/baku">
-                Bakü
-              </ListGroup.Item>
-              <ListGroup.Item action href="/istanbul">
-                İstanbul
+              <ListGroup.Item variant="primary">
+                Devam etmek için bir şehir seçiniz
               </ListGroup.Item>
               <ListGroup.Item action href="/ankara">
                 Ankara
               </ListGroup.Item>
+              <ListGroup.Item action href="/baku">
+                Bakü
+              </ListGroup.Item>
               <ListGroup.Item action href="/denizli">
                 Denizli
+              </ListGroup.Item>
+              <ListGroup.Item action href="/istanbul">
+                İstanbul
               </ListGroup.Item>
             </ListGroup>
             <ListGroup>
