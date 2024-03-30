@@ -48,7 +48,7 @@ export function LeftTable(props) {
           }}
         >
           <Button className="bg-dark text-white" onClick={backendDeployu}>
-            Çalışmıyor mu? Buraya basın ve 10 saniye bekleyin.
+            Çalışmıyorsa buraya basın ve kapatıp açın.
           </Button>
         </div>
 
