@@ -16,8 +16,11 @@ export function TopNavbar(props) {
     case "ankara":
       sehirIsmi = "ANKARA";
       break;
-    case "denzli":
+    case "denizli":
       sehirIsmi = "DENİZLİ";
+      break;
+    case "kocaeli":
+      sehirIsmi = "KOCAELİ";
       break;
   }
 
