@@ -23,6 +23,14 @@ export function LeftTable(props) {
           <Link to={"/"} className=" text-decoration-none ">
             <Button className="bg-dark text-white ">Geri Dön</Button>
           </Link>
+          <a
+            href="http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+            className="text-decoration-none"
+          >
+            <Button className="bg-dark text-white">
+              Çalışmıyor mu? Buraya basın ve 10 saniye bekleyip yeniden deneyin.
+            </Button>
+          </a>
         </div>
 
         <Container
