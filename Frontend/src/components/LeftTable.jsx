@@ -7,9 +7,9 @@ import axios from "axios";
 export function LeftTable(props) {
   const takvim = props.takvim;
 
-  const backendDeployu = () => {
+  const backendDeployu = async () => {
     try {
-      const response = axios.get(
+      const response = await axios.get(
         "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
       );
     } catch (error) {
