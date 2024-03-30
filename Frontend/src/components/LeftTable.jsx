@@ -10,7 +10,7 @@ export function LeftTable(props) {
   const backendDeployu = async () => {
     try {
       const response = await axios.get(
-        "https://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+        "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
       );
     } catch (error) {
       //31
