@@ -2,13 +2,14 @@ import React from "react";
 import { Button, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import axios from "axios";
 
 export function LeftTable(props) {
   const takvim = props.takvim;
 
   const backendDeployu = () => {
     try {
-      const response = fetch(
+      const response = axios.get(
         "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
       );
     } catch (error) {
