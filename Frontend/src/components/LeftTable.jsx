@@ -12,7 +12,7 @@ export function LeftTable(props) {
     >
       <div>
         <div
-          className="d-flex justify-content-center mt-2 mb-2"
+          className="d-flex justify-content-center mt-1 mb-1"
           style={{
             padding: "5px",
             backgroundColor: "black",
@@ -23,6 +23,16 @@ export function LeftTable(props) {
           <Link to={"/"} className=" text-decoration-none ">
             <Button className="bg-dark text-white ">Geri Dön</Button>
           </Link>
+        </div>
+        <div
+          className="d-flex justify-content-center mt-1 mb-1"
+          style={{
+            padding: "5px",
+            backgroundColor: "black",
+            opacity: 0.8,
+            borderRadius: "25px",
+          }}
+        >
           <a
             href="http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
             className="text-decoration-none"
