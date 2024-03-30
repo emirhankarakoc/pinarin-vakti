@@ -49,6 +49,9 @@ export default function App() {
               <ListGroup.Item action href="/istanbul">
                 İstanbul
               </ListGroup.Item>
+              <ListGroup.Item action href="/kocaeli">
+                Kocaeli
+              </ListGroup.Item>
             </ListGroup>
             <ListGroup>
               <ListGroup.Item
