@@ -3,17 +3,18 @@ import { Button, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
+import { useHTTP } from "../hooks/useHTTP";
 
 export function LeftTable(props) {
   const takvim = props.takvim;
 
   const backendDeployu = async () => {
     try {
-      const response = await axios.get(
-        "https://kgzkbi.easypanel.host/api/deploy/f523bde7020874b77051606b4fef1162bea83dbbef174e32"
-      );
+      useHTTP("/backend-redeploy");
+      console.log("basarili.");
     } catch (error) {
       //31
+      console.log("basarisiz");
     }
   };
 

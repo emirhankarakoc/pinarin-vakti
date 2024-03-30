@@ -2,6 +2,7 @@ const express = require("express");
 const mysql = require("mysql2");
 const cors = require("cors");
 const app = express();
+const axios = require("axios");
 
 app.use(cors());
 
@@ -51,8 +52,18 @@ app.listen(8081, () => {
   console.log("listening");
 });
 
-app.get("/", (req, res) => {
-  return res.send(
-    "<h2>selam, hersey yolunda gidiyor. istekleri atabilirsin. cevaplamak icin sabirsizlaniyorum.</h2>"
-  );
+app.get("/", async (req, res) => {
+  res.send("Proje calisiyor. istekleri alabilirim.!");
+});
+
+app.get("/backend-redeploy", async (req, res) => {
+  try {
+    await axios.get(
+      "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+    );
+    console.log("basarilidir");
+  } catch (error) {
+    console.log("sictim");
+  }
+  res.send("istek atiliyor.");
 });
