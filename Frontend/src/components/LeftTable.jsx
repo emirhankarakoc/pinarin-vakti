@@ -36,7 +36,7 @@ export function LeftTable(props) {
             <Button className="bg-dark text-white ">Geri Dön</Button>
           </Link>
         </div>
-        <div
+        {/* <div
           className="d-flex justify-content-center mt-1 mb-1"
           style={{
             padding: "5px",
@@ -48,7 +48,7 @@ export function LeftTable(props) {
           <Button className="bg-dark text-white" onClick={backendDeployu}>
             Çalışmıyor mu? Buraya basın ve 10 saniye bekleyin.
           </Button>
-        </div>
+        </div> */}
 
         <Container
           fluid
