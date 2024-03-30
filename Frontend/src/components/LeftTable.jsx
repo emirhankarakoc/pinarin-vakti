@@ -10,7 +10,7 @@ export function LeftTable(props) {
   const backendDeployu = async () => {
     try {
       const response = await axios.get(
-        "https://kgzkbi.easypanel.host/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+        "https://kgzkbi.easypanel.host/api/deploy/f523bde7020874b77051606b4fef1162bea83dbbef174e32"
       );
     } catch (error) {
       //31
