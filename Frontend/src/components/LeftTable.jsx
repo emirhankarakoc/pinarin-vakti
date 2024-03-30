@@ -10,7 +10,7 @@ export function LeftTable(props) {
   const backendDeployu = async () => {
     try {
       const response = await axios.get(
-        "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+        "https://kgzkbi.easypanel.host/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
       );
     } catch (error) {
       //31
@@ -36,7 +36,7 @@ export function LeftTable(props) {
             <Button className="bg-dark text-white ">Geri Dön</Button>
           </Link>
         </div>
-        {/* <div
+        <div
           className="d-flex justify-content-center mt-1 mb-1"
           style={{
             padding: "5px",
@@ -48,7 +48,7 @@ export function LeftTable(props) {
           <Button className="bg-dark text-white" onClick={backendDeployu}>
             Çalışmıyor mu? Buraya basın ve 10 saniye bekleyin.
           </Button>
-        </div> */}
+        </div>
 
         <Container
           fluid
