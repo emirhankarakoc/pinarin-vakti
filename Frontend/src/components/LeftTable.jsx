@@ -4,13 +4,14 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import axios from "axios";
 import { useHTTP } from "../hooks/useHTTP";
+import { API } from "../lib/http";
 
 export function LeftTable(props) {
   const takvim = props.takvim;
 
   const backendDeployu = async () => {
     try {
-      useHTTP("/backend-redeploy");
+      const response = await axios.get(API + "/backend-redeploy");
       console.log("basarili.");
     } catch (error) {
       //31

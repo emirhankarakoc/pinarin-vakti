@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "https://emirhan-namaz-backend.kgzkbi.easypanel.host";
+export const API = "https://emirhan-namaz-backend.kgzkbi.easypanel.host";
 
 export const http = axios.create({
   baseURL: API,

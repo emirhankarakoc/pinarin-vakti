@@ -62,8 +62,11 @@ app.get("/backend-redeploy", async (req, res) => {
       "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
     );
     console.log("basarilidir");
+    res.status(200);
+    res.send("basarili");
   } catch (error) {
+    res.status(400);
+    res.send("sictim.");
     console.log("sictim");
   }
-  res.send("istek atiliyor.");
 });
