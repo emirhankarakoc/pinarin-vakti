@@ -1,9 +1,20 @@
 import React from "react";
 import { Button, Container } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 export function LeftTable(props) {
   const takvim = props.takvim;
+
+  const backendDeployu = () => {
+    try {
+      const response = fetch(
+        "http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
+      );
+    } catch (error) {
+      //31
+    }
+  };
 
   return (
     <div
@@ -33,14 +44,9 @@ export function LeftTable(props) {
             borderRadius: "25px",
           }}
         >
-          <a
-            href="http://62.72.164.214:3000/api/deploy/5688f3223956384afe59840f4ae63c0e9781979a17f0e84e"
-            className="text-decoration-none"
-          >
-            <Button className="bg-dark text-white">
-              Çalışmıyor mu? Buraya basın ve 10 saniye bekleyip yeniden deneyin.
-            </Button>
-          </a>
+          <Button className="bg-dark text-white" onClick={backendDeployu}>
+            Çalışmıyor mu? Buraya basın ve 10 saniye bekleyin.
+          </Button>
         </div>
 
         <Container
